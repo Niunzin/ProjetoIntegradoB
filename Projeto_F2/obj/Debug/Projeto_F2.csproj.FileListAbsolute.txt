@@ -1,0 +1,10 @@
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\bin\Debug\Projeto_F2.exe.config
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\bin\Debug\Projeto_F2.exe
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\bin\Debug\Projeto_F2.pdb
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\obj\Debug\Projeto_F2.frmLogin.resources
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\obj\Debug\Projeto_F2.Properties.Resources.resources
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\obj\Debug\Projeto_F2.csproj.GenerateResource.Cache
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\obj\Debug\Projeto_F2.exe
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\obj\Debug\Projeto_F2.pdb
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\obj\Debug\Projeto_F2.Modulos.Escala.frmEscala.resources
+c:\users\16266538\documents\visual studio 2013\Projects\Projeto_F2\Projeto_F2\obj\Debug\Projeto_F2.csprojResolveAssemblyReference.cache
