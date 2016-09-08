@@ -1,2 +1,2 @@
 # ProjetoIntegradoB
-para de xeretar aki o arrombado
+Projeto v1.1
