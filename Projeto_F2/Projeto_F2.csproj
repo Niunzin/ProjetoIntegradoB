@@ -50,6 +50,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmCalcData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmCalcData.Designer.cs">
+      <DependentUpon>frmCalcData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Escala\CalculoEscala.cs" />
     <Compile Include="Modulos\Escala\frmEscala.cs">
       <SubType>Form</SubType>
@@ -61,6 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\CalculadoraDeDatas\frmCalcData.resx">
+      <DependentUpon>frmCalcData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Escala\frmEscala.resx">
       <DependentUpon>frmEscala.cs</DependentUpon>

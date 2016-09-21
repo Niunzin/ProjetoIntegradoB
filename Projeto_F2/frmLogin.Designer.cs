@@ -31,7 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.lToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.escalasDeTemperaturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.escalasDeTemperaturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.groupLogin = new System.Windows.Forms.GroupBox();
+            this.calculadoraOfDatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupLogin.SuspendLayout();
             this.SuspendLayout();
@@ -47,12 +49,13 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lToolStripMenuItem,
+            this.toolsStripMenuItem,
             this.sobreToolStripMenuItem,
-            this.escalasDeTemperaturaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(296, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(396, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,12 +73,21 @@
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
-            // escalasDeTemperaturaToolStripMenuItem
+            // toolsStripMenuItem
             // 
-            this.escalasDeTemperaturaToolStripMenuItem.Name = "escalasDeTemperaturaToolStripMenuItem";
-            this.escalasDeTemperaturaToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
-            this.escalasDeTemperaturaToolStripMenuItem.Text = "Escalas de Temperatura";
-            this.escalasDeTemperaturaToolStripMenuItem.Click += new System.EventHandler(this.escalasDeTemperaturaToolStripMenuItem_Click);
+            this.toolsStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.escalasDeTemperaturaToolStripMenuItem1,
+            this.calculadoraOfDatToolStripMenuItem});
+            this.toolsStripMenuItem.Name = "toolsStripMenuItem";
+            this.toolsStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.toolsStripMenuItem.Text = "Ferramentas";
+            // 
+            // escalasDeTemperaturaToolStripMenuItem1
+            // 
+            this.escalasDeTemperaturaToolStripMenuItem1.Name = "escalasDeTemperaturaToolStripMenuItem1";
+            this.escalasDeTemperaturaToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
+            this.escalasDeTemperaturaToolStripMenuItem1.Text = "Escalas de Temperatura";
+            this.escalasDeTemperaturaToolStripMenuItem1.Click += new System.EventHandler(this.escalasDeTemperaturaToolStripMenuItem1_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -86,9 +98,10 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(9, 71);
+            this.btnEntrar.Location = new System.Drawing.Point(12, 87);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(261, 30);
+            this.btnEntrar.Size = new System.Drawing.Size(348, 37);
             this.btnEntrar.TabIndex = 5;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -97,34 +110,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 22);
+            this.label1.Location = new System.Drawing.Point(8, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(42, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Login";
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(50, 45);
+            this.txtSenha.Location = new System.Drawing.Point(67, 55);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '•';
-            this.txtSenha.Size = new System.Drawing.Size(220, 20);
+            this.txtSenha.Size = new System.Drawing.Size(292, 23);
             this.txtSenha.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 48);
+            this.label2.Location = new System.Drawing.Point(8, 59);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Senha";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(50, 19);
+            this.txtUsuario.Location = new System.Drawing.Point(67, 23);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(220, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(292, 23);
             this.txtUsuario.TabIndex = 1;
             // 
             // groupLogin
@@ -135,25 +152,36 @@
             this.groupLogin.Controls.Add(this.label2);
             this.groupLogin.Controls.Add(this.txtUsuario);
             this.groupLogin.Enabled = false;
-            this.groupLogin.Location = new System.Drawing.Point(12, 27);
+            this.groupLogin.Location = new System.Drawing.Point(16, 33);
+            this.groupLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupLogin.Name = "groupLogin";
-            this.groupLogin.Size = new System.Drawing.Size(276, 110);
+            this.groupLogin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupLogin.Size = new System.Drawing.Size(368, 135);
             this.groupLogin.TabIndex = 8;
             this.groupLogin.TabStop = false;
-            this.groupLogin.Text = "Area de acesso";
+            this.groupLogin.Text = "Área de acesso";
+            // 
+            // calculadoraOfDatToolStripMenuItem
+            // 
+            this.calculadoraOfDatToolStripMenuItem.Name = "calculadoraOfDatToolStripMenuItem";
+            this.calculadoraOfDatToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.calculadoraOfDatToolStripMenuItem.Text = "Calculadora de Datas";
+            this.calculadoraOfDatToolStripMenuItem.Click += new System.EventHandler(this.calculadoraOfDatToolStripMenuItem_Click);
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 145);
+            this.ClientSize = new System.Drawing.Size(396, 178);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupLogin);
+            this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "F2";
+            this.Text = "F3";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -170,7 +198,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem lToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem escalasDeTemperaturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Label label1;
@@ -178,6 +205,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.GroupBox groupLogin;
+        private System.Windows.Forms.ToolStripMenuItem toolsStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem escalasDeTemperaturaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem calculadoraOfDatToolStripMenuItem;
     }
 }
 

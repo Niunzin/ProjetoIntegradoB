@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projeto_F2.Modulos.Escala;
+using Projeto_F2.Modulos.CalculadoraDeDatas;
 
 namespace Projeto_F2
 {
     public partial class frmLogin : Form
     {
-        public const string APP_VERSION = "1.1";
+        public const string APP_VERSION = "1.2";
 
         public frmLogin()
         {
@@ -56,9 +57,14 @@ namespace Projeto_F2
         {
         }
 
-        private void escalasDeTemperaturaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void escalasDeTemperaturaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            new frmEscala().Show();
+            new frmEscala().ShowDialog();
+        }
+
+        private void calculadoraOfDatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmCalcData().ShowDialog();
         }
     }
 }
