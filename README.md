@@ -1,2 +1,2 @@
 # ProjetoIntegradoB
-Projeto v1.1
+Versão 1.2 (F3)
