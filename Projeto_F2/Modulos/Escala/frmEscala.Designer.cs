@@ -1,4 +1,4 @@
-﻿namespace Projeto_F2.Modulos.Escala
+namespace Projeto_F2.Modulos.Escala
 {
     partial class frmEscala
     {
@@ -212,7 +212,7 @@
             this.MaximizeBox = false;
             this.Name = "frmEscala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEscala";
+            this.Text = "Escala de Temperatura";
             this.Load += new System.EventHandler(this.frmEscala_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
