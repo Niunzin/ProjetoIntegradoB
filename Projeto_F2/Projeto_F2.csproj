@@ -50,12 +50,31 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmAdicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmAdicao.Designer.cs">
+      <DependentUpon>frmAdicao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\CalculadoraDeDatas\frmCalcData.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\CalculadoraDeDatas\frmCalcData.Designer.cs">
       <DependentUpon>frmCalcData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmInfoData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmInfoData.Designer.cs">
+      <DependentUpon>frmInfoData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmSubtracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmSubtracao.Designer.cs">
+      <DependentUpon>frmSubtracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\Utilidades.cs" />
     <Compile Include="Modulos\Escala\CalculoEscala.cs" />
     <Compile Include="Modulos\Escala\frmEscala.cs">
       <SubType>Form</SubType>

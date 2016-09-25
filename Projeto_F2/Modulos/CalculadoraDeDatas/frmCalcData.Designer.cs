@@ -39,21 +39,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDia = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.rdHojeEData = new System.Windows.Forms.RadioButton();
+            this.rdAdicao = new System.Windows.Forms.RadioButton();
+            this.rdSubtracao = new System.Windows.Forms.RadioButton();
+            this.rdInformacoes = new System.Windows.Forms.RadioButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.calculadoraMulticulturalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtResultado = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdInformacoes);
+            this.groupBox1.Controls.Add(this.rdSubtracao);
+            this.groupBox1.Controls.Add(this.rdAdicao);
+            this.groupBox1.Controls.Add(this.rdHojeEData);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -63,14 +66,14 @@
             this.groupBox1.Controls.Add(this.txtMes);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtDia);
-            this.groupBox1.Location = new System.Drawing.Point(16, 14);
+            this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(270, 116);
+            this.groupBox1.Size = new System.Drawing.Size(270, 211);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Data de Nascimento";
+            this.groupBox1.Text = "Data de Entrada";
             // 
             // label5
             // 
@@ -101,10 +104,10 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(8, 74);
+            this.btnCalcular.Location = new System.Drawing.Point(6, 176);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(254, 28);
+            this.btnCalcular.Size = new System.Drawing.Size(258, 28);
             this.btnCalcular.TabIndex = 5;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -118,6 +121,8 @@
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(94, 23);
             this.txtAno.TabIndex = 4;
+            this.txtAno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAno.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAno_KeyUp);
             // 
             // label2
             // 
@@ -136,6 +141,8 @@
             this.txtMes.Name = "txtMes";
             this.txtMes.Size = new System.Drawing.Size(45, 23);
             this.txtMes.TabIndex = 2;
+            this.txtMes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMes.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMes_KeyUp);
             // 
             // label1
             // 
@@ -154,120 +161,107 @@
             this.txtDia.Name = "txtDia";
             this.txtDia.Size = new System.Drawing.Size(45, 23);
             this.txtDia.TabIndex = 0;
+            this.txtDia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDia.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDia_KeyUp);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(16, 138);
+            this.groupBox2.Controls.Add(this.txtResultado);
+            this.groupBox2.Location = new System.Drawing.Point(288, 28);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(270, 389);
+            this.groupBox2.Size = new System.Drawing.Size(270, 211);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Idade";
+            this.groupBox2.Text = "Resultado";
             // 
-            // textBox2
+            // rdHojeEData
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(128, 55);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(132, 23);
-            this.textBox2.TabIndex = 6;
+            this.rdHojeEData.AutoSize = true;
+            this.rdHojeEData.Checked = true;
+            this.rdHojeEData.Location = new System.Drawing.Point(6, 72);
+            this.rdHojeEData.Name = "rdHojeEData";
+            this.rdHojeEData.Size = new System.Drawing.Size(120, 20);
+            this.rdHojeEData.TabIndex = 9;
+            this.rdHojeEData.TabStop = true;
+            this.rdHojeEData.Text = "Calcular Idade";
+            this.rdHojeEData.UseVisualStyleBackColor = true;
+            this.rdHojeEData.CheckedChanged += new System.EventHandler(this.rdHojeEData_CheckedChanged);
             // 
-            // textBox1
+            // rdAdicao
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(128, 23);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(132, 23);
-            this.textBox1.TabIndex = 5;
+            this.rdAdicao.AutoSize = true;
+            this.rdAdicao.Location = new System.Drawing.Point(6, 98);
+            this.rdAdicao.Name = "rdAdicao";
+            this.rdAdicao.Size = new System.Drawing.Size(234, 20);
+            this.rdAdicao.TabIndex = 10;
+            this.rdAdicao.Text = "Operação de Adição com Datas";
+            this.rdAdicao.UseVisualStyleBackColor = true;
+            this.rdAdicao.CheckedChanged += new System.EventHandler(this.rdAdicao_CheckedChanged);
             // 
-            // label10
+            // rdSubtracao
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 123);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 16);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Hora";
+            this.rdSubtracao.AutoSize = true;
+            this.rdSubtracao.Location = new System.Drawing.Point(6, 124);
+            this.rdSubtracao.Name = "rdSubtracao";
+            this.rdSubtracao.Size = new System.Drawing.Size(258, 20);
+            this.rdSubtracao.TabIndex = 11;
+            this.rdSubtracao.Text = "Operação de Subtração com Datas";
+            this.rdSubtracao.UseVisualStyleBackColor = true;
+            this.rdSubtracao.CheckedChanged += new System.EventHandler(this.rdSubtracao_CheckedChanged);
             // 
-            // label9
+            // rdInformacoes
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 91);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 16);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Dia";
+            this.rdInformacoes.AutoSize = true;
+            this.rdInformacoes.Location = new System.Drawing.Point(6, 150);
+            this.rdInformacoes.Name = "rdInformacoes";
+            this.rdInformacoes.Size = new System.Drawing.Size(186, 20);
+            this.rdInformacoes.TabIndex = 12;
+            this.rdInformacoes.Text = "Informações dessa Data";
+            this.rdInformacoes.UseVisualStyleBackColor = true;
+            this.rdInformacoes.CheckedChanged += new System.EventHandler(this.rdInformacoes_CheckedChanged);
             // 
-            // label8
+            // menuStrip1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 59);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 16);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Mês";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculadoraMulticulturalToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(570, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // label7
+            // calculadoraMulticulturalToolStripMenuItem
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 16);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Ano";
+            this.calculadoraMulticulturalToolStripMenuItem.Name = "calculadoraMulticulturalToolStripMenuItem";
+            this.calculadoraMulticulturalToolStripMenuItem.Size = new System.Drawing.Size(153, 20);
+            this.calculadoraMulticulturalToolStripMenuItem.Text = "Calculadora Multicultural";
+            this.calculadoraMulticulturalToolStripMenuItem.Click += new System.EventHandler(this.calculadoraMulticulturalToolStripMenuItem_Click);
             // 
-            // label6
+            // txtResultado
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 16);
-            this.label6.TabIndex = 0;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(128, 87);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(132, 23);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(128, 119);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(132, 23);
-            this.textBox4.TabIndex = 8;
+            this.txtResultado.BackColor = System.Drawing.SystemColors.Control;
+            this.txtResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtResultado.Location = new System.Drawing.Point(6, 23);
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.ReadOnly = true;
+            this.txtResultado.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.txtResultado.Size = new System.Drawing.Size(258, 181);
+            this.txtResultado.TabIndex = 0;
+            this.txtResultado.Text = "";
             // 
             // frmCalcData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 542);
+            this.ClientSize = new System.Drawing.Size(570, 250);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmCalcData";
@@ -276,8 +270,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -294,15 +290,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.RadioButton rdInformacoes;
+        private System.Windows.Forms.RadioButton rdSubtracao;
+        private System.Windows.Forms.RadioButton rdAdicao;
+        private System.Windows.Forms.RadioButton rdHojeEData;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem calculadoraMulticulturalToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox txtResultado;
 
     }
 }
