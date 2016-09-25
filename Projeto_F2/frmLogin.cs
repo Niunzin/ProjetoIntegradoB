@@ -45,7 +45,7 @@ namespace Projeto_F2
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(string.Format("Versao do Software: v{0}", APP_VERSION), "Sobre", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            new frmSobre().Show();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

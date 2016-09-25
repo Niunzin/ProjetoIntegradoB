@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdInformacoes = new System.Windows.Forms.RadioButton();
+            this.rdSubtracao = new System.Windows.Forms.RadioButton();
+            this.rdAdicao = new System.Windows.Forms.RadioButton();
+            this.rdHojeEData = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,13 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDia = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdHojeEData = new System.Windows.Forms.RadioButton();
-            this.rdAdicao = new System.Windows.Forms.RadioButton();
-            this.rdSubtracao = new System.Windows.Forms.RadioButton();
-            this.rdInformacoes = new System.Windows.Forms.RadioButton();
+            this.txtResultado = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.calculadoraMulticulturalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtResultado = new System.Windows.Forms.RichTextBox();
+            this.rdInfoEntreDatas = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdInfoEntreDatas);
             this.groupBox1.Controls.Add(this.rdInformacoes);
             this.groupBox1.Controls.Add(this.rdSubtracao);
             this.groupBox1.Controls.Add(this.rdAdicao);
@@ -70,10 +72,56 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(270, 211);
+            this.groupBox1.Size = new System.Drawing.Size(270, 236);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data de Entrada";
+            // 
+            // rdInformacoes
+            // 
+            this.rdInformacoes.AutoSize = true;
+            this.rdInformacoes.Location = new System.Drawing.Point(6, 173);
+            this.rdInformacoes.Name = "rdInformacoes";
+            this.rdInformacoes.Size = new System.Drawing.Size(186, 20);
+            this.rdInformacoes.TabIndex = 12;
+            this.rdInformacoes.Text = "Informações dessa Data";
+            this.rdInformacoes.UseVisualStyleBackColor = true;
+            this.rdInformacoes.CheckedChanged += new System.EventHandler(this.rdInformacoes_CheckedChanged);
+            // 
+            // rdSubtracao
+            // 
+            this.rdSubtracao.AutoSize = true;
+            this.rdSubtracao.Location = new System.Drawing.Point(6, 147);
+            this.rdSubtracao.Name = "rdSubtracao";
+            this.rdSubtracao.Size = new System.Drawing.Size(215, 20);
+            this.rdSubtracao.TabIndex = 11;
+            this.rdSubtracao.Text = "Calcular Subtração de Datas";
+            this.rdSubtracao.UseVisualStyleBackColor = true;
+            this.rdSubtracao.CheckedChanged += new System.EventHandler(this.rdSubtracao_CheckedChanged);
+            // 
+            // rdAdicao
+            // 
+            this.rdAdicao.AutoSize = true;
+            this.rdAdicao.Location = new System.Drawing.Point(6, 121);
+            this.rdAdicao.Name = "rdAdicao";
+            this.rdAdicao.Size = new System.Drawing.Size(191, 20);
+            this.rdAdicao.TabIndex = 10;
+            this.rdAdicao.Text = "Calcular Adição de Datas";
+            this.rdAdicao.UseVisualStyleBackColor = true;
+            this.rdAdicao.CheckedChanged += new System.EventHandler(this.rdAdicao_CheckedChanged);
+            // 
+            // rdHojeEData
+            // 
+            this.rdHojeEData.AutoSize = true;
+            this.rdHojeEData.Checked = true;
+            this.rdHojeEData.Location = new System.Drawing.Point(6, 72);
+            this.rdHojeEData.Name = "rdHojeEData";
+            this.rdHojeEData.Size = new System.Drawing.Size(120, 20);
+            this.rdHojeEData.TabIndex = 9;
+            this.rdHojeEData.TabStop = true;
+            this.rdHojeEData.Text = "Calcular Idade";
+            this.rdHojeEData.UseVisualStyleBackColor = true;
+            this.rdHojeEData.CheckedChanged += new System.EventHandler(this.rdHojeEData_CheckedChanged);
             // 
             // label5
             // 
@@ -104,7 +152,7 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(6, 176);
+            this.btnCalcular.Location = new System.Drawing.Point(6, 200);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(258, 28);
@@ -171,56 +219,22 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(270, 211);
+            this.groupBox2.Size = new System.Drawing.Size(270, 236);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultado";
             // 
-            // rdHojeEData
+            // txtResultado
             // 
-            this.rdHojeEData.AutoSize = true;
-            this.rdHojeEData.Checked = true;
-            this.rdHojeEData.Location = new System.Drawing.Point(6, 72);
-            this.rdHojeEData.Name = "rdHojeEData";
-            this.rdHojeEData.Size = new System.Drawing.Size(120, 20);
-            this.rdHojeEData.TabIndex = 9;
-            this.rdHojeEData.TabStop = true;
-            this.rdHojeEData.Text = "Calcular Idade";
-            this.rdHojeEData.UseVisualStyleBackColor = true;
-            this.rdHojeEData.CheckedChanged += new System.EventHandler(this.rdHojeEData_CheckedChanged);
-            // 
-            // rdAdicao
-            // 
-            this.rdAdicao.AutoSize = true;
-            this.rdAdicao.Location = new System.Drawing.Point(6, 98);
-            this.rdAdicao.Name = "rdAdicao";
-            this.rdAdicao.Size = new System.Drawing.Size(234, 20);
-            this.rdAdicao.TabIndex = 10;
-            this.rdAdicao.Text = "Operação de Adição com Datas";
-            this.rdAdicao.UseVisualStyleBackColor = true;
-            this.rdAdicao.CheckedChanged += new System.EventHandler(this.rdAdicao_CheckedChanged);
-            // 
-            // rdSubtracao
-            // 
-            this.rdSubtracao.AutoSize = true;
-            this.rdSubtracao.Location = new System.Drawing.Point(6, 124);
-            this.rdSubtracao.Name = "rdSubtracao";
-            this.rdSubtracao.Size = new System.Drawing.Size(258, 20);
-            this.rdSubtracao.TabIndex = 11;
-            this.rdSubtracao.Text = "Operação de Subtração com Datas";
-            this.rdSubtracao.UseVisualStyleBackColor = true;
-            this.rdSubtracao.CheckedChanged += new System.EventHandler(this.rdSubtracao_CheckedChanged);
-            // 
-            // rdInformacoes
-            // 
-            this.rdInformacoes.AutoSize = true;
-            this.rdInformacoes.Location = new System.Drawing.Point(6, 150);
-            this.rdInformacoes.Name = "rdInformacoes";
-            this.rdInformacoes.Size = new System.Drawing.Size(186, 20);
-            this.rdInformacoes.TabIndex = 12;
-            this.rdInformacoes.Text = "Informações dessa Data";
-            this.rdInformacoes.UseVisualStyleBackColor = true;
-            this.rdInformacoes.CheckedChanged += new System.EventHandler(this.rdInformacoes_CheckedChanged);
+            this.txtResultado.BackColor = System.Drawing.SystemColors.Control;
+            this.txtResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtResultado.Location = new System.Drawing.Point(6, 23);
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.ReadOnly = true;
+            this.txtResultado.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.txtResultado.Size = new System.Drawing.Size(258, 205);
+            this.txtResultado.TabIndex = 0;
+            this.txtResultado.Text = "";
             // 
             // menuStrip1
             // 
@@ -239,23 +253,23 @@
             this.calculadoraMulticulturalToolStripMenuItem.Text = "Calculadora Multicultural";
             this.calculadoraMulticulturalToolStripMenuItem.Click += new System.EventHandler(this.calculadoraMulticulturalToolStripMenuItem_Click);
             // 
-            // txtResultado
+            // rdInfoEntreDatas
             // 
-            this.txtResultado.BackColor = System.Drawing.SystemColors.Control;
-            this.txtResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtResultado.Location = new System.Drawing.Point(6, 23);
-            this.txtResultado.Name = "txtResultado";
-            this.txtResultado.ReadOnly = true;
-            this.txtResultado.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtResultado.Size = new System.Drawing.Size(258, 181);
-            this.txtResultado.TabIndex = 0;
-            this.txtResultado.Text = "";
+            this.rdInfoEntreDatas.AutoSize = true;
+            this.rdInfoEntreDatas.Location = new System.Drawing.Point(6, 95);
+            this.rdInfoEntreDatas.Name = "rdInfoEntreDatas";
+            this.rdInfoEntreDatas.Size = new System.Drawing.Size(190, 20);
+            this.rdInfoEntreDatas.TabIndex = 13;
+            this.rdInfoEntreDatas.TabStop = true;
+            this.rdInfoEntreDatas.Text = "Informações entre Datas";
+            this.rdInfoEntreDatas.UseVisualStyleBackColor = true;
+            this.rdInfoEntreDatas.CheckedChanged += new System.EventHandler(this.rdInfoEntreDatas_CheckedChanged);
             // 
             // frmCalcData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 250);
+            this.ClientSize = new System.Drawing.Size(570, 276);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -297,6 +311,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem calculadoraMulticulturalToolStripMenuItem;
         private System.Windows.Forms.RichTextBox txtResultado;
+        private System.Windows.Forms.RadioButton rdInfoEntreDatas;
 
     }
 }
