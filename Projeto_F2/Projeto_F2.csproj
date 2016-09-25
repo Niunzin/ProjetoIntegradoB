@@ -7,8 +7,8 @@
     <ProjectGuid>{A8318D1C-F81E-4C00-841A-85BEFF500ECE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Projeto</RootNamespace>
-    <AssemblyName>Projeto</AssemblyName>
+    <RootNamespace>Projeto_F2</RootNamespace>
+    <AssemblyName>Projeto_F2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -62,6 +62,12 @@
     <Compile Include="Modulos\CalculadoraDeDatas\frmCalcData.Designer.cs">
       <DependentUpon>frmCalcData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmCalcMultiCultural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\CalculadoraDeDatas\frmCalcMultiCultural.Designer.cs">
+      <DependentUpon>frmCalcMultiCultural.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\CalculadoraDeDatas\frmControleData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\CalculadoraDeDatas\frmCalcData.resx">
       <DependentUpon>frmCalcData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\CalculadoraDeDatas\frmCalcMultiCultural.resx">
+      <DependentUpon>frmCalcMultiCultural.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\CalculadoraDeDatas\frmControleData.resx">
       <DependentUpon>frmControleData.cs</DependentUpon>

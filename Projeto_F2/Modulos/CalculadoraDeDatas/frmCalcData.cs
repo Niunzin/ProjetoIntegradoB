@@ -75,7 +75,7 @@ namespace Projeto_F2.Modulos.CalculadoraDeDatas
                     addTextBoxTitle("Informações da Data");
                     addTextBoxResult("Dia:", data.ToString("dddd", new CultureInfo("pt-BR")));
                     addTextBoxResult("Mês:", Utilidades.ObterNomeMes(data.Month));
-                    addTextBoxResult("Dia juliano:", Math.Ceiling(data.ToOADate() + 2415018.5).ToString());
+                    addTextBoxResult("Dia juliano:\t", ((data - new DateTime(data.Year, 1, 1)).TotalDays + 1).ToString());
                     addTextBoxResult("É ano bissexto?:", ((DateTime.IsLeapYear(data.Year)) ? "Sim" : "Não") );
                 }
             }
@@ -205,7 +205,7 @@ namespace Projeto_F2.Modulos.CalculadoraDeDatas
 
         private void calculadoraMulticulturalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new frmCalcMultiCultural().ShowDialog();
         }
 
         private void rdHojeEData_CheckedChanged(object sender, EventArgs e)

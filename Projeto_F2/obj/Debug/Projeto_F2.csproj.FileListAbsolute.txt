@@ -26,10 +26,11 @@ C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Proje
 C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.csproj.GenerateResource.Cache
 C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.Modulos.CalculadoraDeDatas.frmNovaDataPadrao.resources
 C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.frmSobre.resources
-C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\bin\Debug\Projeto.exe.config
-C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\bin\Debug\Projeto.exe
-C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\bin\Debug\Projeto.pdb
-C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto.Properties.Resources.resources
-C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto.exe
-C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto.pdb
 C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.Modulos.CalculadoraDeDatas.frmControleData.resources
+C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\bin\Debug\Projeto_F2.exe.config
+C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\bin\Debug\Projeto_F2.exe
+C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\bin\Debug\Projeto_F2.pdb
+C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.Modulos.CalculadoraDeDatas.frmCalcMultiCultural.resources
+C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.Properties.Resources.resources
+C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.exe
+C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.pdb

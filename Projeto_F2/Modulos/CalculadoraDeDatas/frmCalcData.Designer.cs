@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdInfoEntreDatas = new System.Windows.Forms.RadioButton();
             this.rdInformacoes = new System.Windows.Forms.RadioButton();
             this.rdSubtracao = new System.Windows.Forms.RadioButton();
             this.rdAdicao = new System.Windows.Forms.RadioButton();
@@ -46,7 +47,6 @@
             this.txtResultado = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.calculadoraMulticulturalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rdInfoEntreDatas = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -77,10 +77,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data de Entrada";
             // 
+            // rdInfoEntreDatas
+            // 
+            this.rdInfoEntreDatas.AutoSize = true;
+            this.rdInfoEntreDatas.Location = new System.Drawing.Point(6, 98);
+            this.rdInfoEntreDatas.Name = "rdInfoEntreDatas";
+            this.rdInfoEntreDatas.Size = new System.Drawing.Size(190, 20);
+            this.rdInfoEntreDatas.TabIndex = 13;
+            this.rdInfoEntreDatas.TabStop = true;
+            this.rdInfoEntreDatas.Text = "Informações entre Datas";
+            this.rdInfoEntreDatas.UseVisualStyleBackColor = true;
+            this.rdInfoEntreDatas.CheckedChanged += new System.EventHandler(this.rdInfoEntreDatas_CheckedChanged);
+            // 
             // rdInformacoes
             // 
             this.rdInformacoes.AutoSize = true;
-            this.rdInformacoes.Location = new System.Drawing.Point(6, 173);
+            this.rdInformacoes.Location = new System.Drawing.Point(6, 176);
             this.rdInformacoes.Name = "rdInformacoes";
             this.rdInformacoes.Size = new System.Drawing.Size(186, 20);
             this.rdInformacoes.TabIndex = 12;
@@ -91,7 +103,7 @@
             // rdSubtracao
             // 
             this.rdSubtracao.AutoSize = true;
-            this.rdSubtracao.Location = new System.Drawing.Point(6, 147);
+            this.rdSubtracao.Location = new System.Drawing.Point(6, 150);
             this.rdSubtracao.Name = "rdSubtracao";
             this.rdSubtracao.Size = new System.Drawing.Size(215, 20);
             this.rdSubtracao.TabIndex = 11;
@@ -102,7 +114,7 @@
             // rdAdicao
             // 
             this.rdAdicao.AutoSize = true;
-            this.rdAdicao.Location = new System.Drawing.Point(6, 121);
+            this.rdAdicao.Location = new System.Drawing.Point(6, 124);
             this.rdAdicao.Name = "rdAdicao";
             this.rdAdicao.Size = new System.Drawing.Size(191, 20);
             this.rdAdicao.TabIndex = 10;
@@ -252,18 +264,6 @@
             this.calculadoraMulticulturalToolStripMenuItem.Size = new System.Drawing.Size(153, 20);
             this.calculadoraMulticulturalToolStripMenuItem.Text = "Calculadora Multicultural";
             this.calculadoraMulticulturalToolStripMenuItem.Click += new System.EventHandler(this.calculadoraMulticulturalToolStripMenuItem_Click);
-            // 
-            // rdInfoEntreDatas
-            // 
-            this.rdInfoEntreDatas.AutoSize = true;
-            this.rdInfoEntreDatas.Location = new System.Drawing.Point(6, 95);
-            this.rdInfoEntreDatas.Name = "rdInfoEntreDatas";
-            this.rdInfoEntreDatas.Size = new System.Drawing.Size(190, 20);
-            this.rdInfoEntreDatas.TabIndex = 13;
-            this.rdInfoEntreDatas.TabStop = true;
-            this.rdInfoEntreDatas.Text = "Informações entre Datas";
-            this.rdInfoEntreDatas.UseVisualStyleBackColor = true;
-            this.rdInfoEntreDatas.CheckedChanged += new System.EventHandler(this.rdInfoEntreDatas_CheckedChanged);
             // 
             // frmCalcData
             // 
