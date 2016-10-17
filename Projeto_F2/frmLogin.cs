@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projeto_F2.Modulos.Escala;
 using Projeto_F2.Modulos.CalculadoraDeDatas;
+using Projeto_F2.Modulos.ForcaSenha;
 
 namespace Projeto_F2
 {
     public partial class frmLogin : Form
     {
-        public const string APP_VERSION = "1.2";
+        public const string APP_VERSION = "2.1";
 
         public frmLogin()
         {
@@ -65,6 +66,11 @@ namespace Projeto_F2
         private void calculadoraOfDatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmCalcData().ShowDialog();
+        }
+
+        private void forçaDaSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmForcaSenha().ShowDialog();
         }
     }
 }

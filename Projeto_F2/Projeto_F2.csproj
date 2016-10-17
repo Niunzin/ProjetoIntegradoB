@@ -88,6 +88,13 @@
     <Compile Include="Modulos\Escala\frmEscala.Designer.cs">
       <DependentUpon>frmEscala.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\ForcaSenha\AvaliarSenha.cs" />
+    <Compile Include="Modulos\ForcaSenha\frmForcaSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ForcaSenha\frmForcaSenha.Designer.cs">
+      <DependentUpon>frmForcaSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
@@ -110,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Escala\frmEscala.resx">
       <DependentUpon>frmEscala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ForcaSenha\frmForcaSenha.resx">
+      <DependentUpon>frmForcaSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

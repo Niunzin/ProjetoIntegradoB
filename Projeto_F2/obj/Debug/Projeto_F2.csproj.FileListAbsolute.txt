@@ -34,3 +34,4 @@ C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Proje
 C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.Properties.Resources.resources
 C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.exe
 C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.pdb
+C:\Users\PC10\Documents\Visual Studio 2013\Projects\PUCC\Projeto Integrado\Projeto Integrado B\ProjetoIntegradoB\trunk\Projeto_F2\obj\Debug\Projeto_F2.Modulos.ForcaSenha.frmForcaSenha.resources
