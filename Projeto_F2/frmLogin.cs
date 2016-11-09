@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using Projeto_F2.Modulos.Escala;
 using Projeto_F2.Modulos.CalculadoraDeDatas;
 using Projeto_F2.Modulos.ForcaSenha;
+using Projeto_F2.Modulos.Usuarios;
 
 namespace Projeto_F2
 {
@@ -49,13 +51,21 @@ namespace Projeto_F2
             new frmSobre().Show();
         }
 
+        
+        Usuario usuario = new Usuario();
+        Gerenciador gerenciador = new Gerenciador();
         private void frmLogin_Load(object sender, EventArgs e)
         {
             this.Text += " " + APP_VERSION;
+
+            usuario.Nome = "roberto denis penis dj";
+            gerenciador.Adicionar(usuario);
+
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            gerenciador.Remover(usuario);
         }
 
         private void escalasDeTemperaturaToolStripMenuItem1_Click(object sender, EventArgs e)

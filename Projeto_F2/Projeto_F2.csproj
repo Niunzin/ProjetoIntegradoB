@@ -95,6 +95,8 @@
     <Compile Include="Modulos\ForcaSenha\frmForcaSenha.Designer.cs">
       <DependentUpon>frmForcaSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Usuarios\Gerenciador.cs" />
+    <Compile Include="Modulos\Usuarios\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
