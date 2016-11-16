@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,17 +11,18 @@ namespace Projeto_F2.Modulos.Usuarios
     class Gerenciador
     {
         private const string arquivo = "reg_usuarios.txt";
+        private List<Usuario> usuarios;
 
         public Gerenciador()
         {
-
+            this.usuarios = new List<Usuario>();
         }
 
         public void Adicionar(Usuario usuario)
         {
             try
             {
-                File.AppendAllText(arquivo, usuario.ToString() + "\n");
+                usuarios.Add(usuario);
             } catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Falha ao salvar usuário", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -32,25 +33,7 @@ namespace Projeto_F2.Modulos.Usuarios
         {
             try
             {
-                string conteudo = File.ReadAllText(arquivo);
-                string[] usuarios = new string[] { };
-                List<string> novos_usuarios = new List<string>();
-
-                if (!conteudo.Contains('\n'))
-                    return;
-
-                usuarios = conteudo.Split('\n');
-                
-                foreach(string u in usuarios)
-                {
-                    if (u.Equals(usuario))
-                        continue;
-
-                    novos_usuarios.Add(u);
-                }
-
-                File.Delete(arquivo);
-                File.AppendAllText(arquivo, string.Join("\n", novos_usuarios.ToArray()));
+                usuarios.Remove(usuario);
             }
             catch (Exception e)
             {
@@ -58,9 +41,42 @@ namespace Projeto_F2.Modulos.Usuarios
             }
         }
 
-        public void Alterar(Usuario antigo, Usuario novo)
+        public List<Usuario> ObterUsuarios()
         {
+            return usuarios;
+        }
 
+        public Usuario ObterUsuario(Usuario usuario)
+        {
+            try
+            {
+                if (usuarios.Contains(usuario))
+                {
+                    return usuarios.ElementAt(usuarios.IndexOf(usuario));
+                }
+                else
+                {
+                    throw new Exception("Não foi possível encontrar o usuário.");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Falha ao remover usuário", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            return usuario;
+        }
+
+        public void Salvar()
+        {
+            StreamWriter sw = new StreamWriter(arquivo);
+            
+            foreach(Usuario usuario in usuarios)
+            {
+                sw.WriteLine(usuario.ToString());
+            }
+
+            sw.Close();
         }
     }
 }
