@@ -81,12 +81,13 @@ namespace Projeto_F2.Modulos.Usuarios
 
         public override string ToString()
         {
+            char mask = ' ';
             return
-                this.Cpf.PadRight(10, '|') +
-                this.Senha.PadRight(50, '|') +
-                this.Alteracaosenha.ToString("dd/mm/yyyy hh:mm:ss").PadRight(19, '|') +
-                this.Nome.PadRight(50, '|') +
-                this.Rg.PadRight(10, '|') +
+                this.Cpf.PadRight(10, mask) +
+                this.Senha.PadRight(50, mask) +
+                this.Alteracaosenha.ToString("dd/mm/yyyy hh:mm:ss").PadRight(19, mask) +
+                this.Nome.PadRight(50, mask) +
+                this.Rg.PadRight(10, mask) +
                 this.Estado.ToString() +
                 this.Permissao.ToString();
         }
