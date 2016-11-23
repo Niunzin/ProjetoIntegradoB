@@ -78,5 +78,21 @@ namespace Projeto_F2.Modulos.Usuarios
 
             sw.Close();
         }
+
+        public void Ler()
+        {
+            StreamReader sr = new StreamReader(arquivo);
+            string source = sr.ReadToEnd();
+
+            foreach (string line in source.Split('\n'))
+            {
+                if (string.IsNullOrEmpty(line))
+                {
+                    Usuario u = new Usuario();
+                    u.FromString(line);
+                    usuarios.Add(u);
+                }
+            }
+        }
     }
 }

@@ -63,7 +63,7 @@
             // lToolStripMenuItem
             // 
             this.lToolStripMenuItem.Name = "lToolStripMenuItem";
-            this.lToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.lToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.lToolStripMenuItem.Text = "Login";
             this.lToolStripMenuItem.Click += new System.EventHandler(this.lToolStripMenuItem_Click);
             // 
@@ -74,41 +74,41 @@
             this.calculadoraOfDatToolStripMenuItem,
             this.forçaDaSenhaToolStripMenuItem});
             this.toolsStripMenuItem.Name = "toolsStripMenuItem";
-            this.toolsStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.toolsStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.toolsStripMenuItem.Text = "Ferramentas";
             // 
             // escalasDeTemperaturaToolStripMenuItem1
             // 
             this.escalasDeTemperaturaToolStripMenuItem1.Name = "escalasDeTemperaturaToolStripMenuItem1";
-            this.escalasDeTemperaturaToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
+            this.escalasDeTemperaturaToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
             this.escalasDeTemperaturaToolStripMenuItem1.Text = "Escalas de Temperatura";
             this.escalasDeTemperaturaToolStripMenuItem1.Click += new System.EventHandler(this.escalasDeTemperaturaToolStripMenuItem1_Click);
             // 
             // calculadoraOfDatToolStripMenuItem
             // 
             this.calculadoraOfDatToolStripMenuItem.Name = "calculadoraOfDatToolStripMenuItem";
-            this.calculadoraOfDatToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.calculadoraOfDatToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.calculadoraOfDatToolStripMenuItem.Text = "Calculadora de Datas";
             this.calculadoraOfDatToolStripMenuItem.Click += new System.EventHandler(this.calculadoraOfDatToolStripMenuItem_Click);
             // 
             // forçaDaSenhaToolStripMenuItem
             // 
             this.forçaDaSenhaToolStripMenuItem.Name = "forçaDaSenhaToolStripMenuItem";
-            this.forçaDaSenhaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.forçaDaSenhaToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.forçaDaSenhaToolStripMenuItem.Text = "Avaliar Senha";
             this.forçaDaSenhaToolStripMenuItem.Click += new System.EventHandler(this.forçaDaSenhaToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -137,6 +137,7 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(67, 55);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSenha.MaxLength = 50;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '•';
             this.txtSenha.Size = new System.Drawing.Size(292, 23);
@@ -156,6 +157,7 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(67, 23);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.MaxLength = 50;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(292, 23);
             this.txtUsuario.TabIndex = 1;

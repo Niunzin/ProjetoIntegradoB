@@ -59,13 +59,23 @@ namespace Projeto_F2
             this.Text += " " + APP_VERSION;
 
             usuario.Nome = "roberto denis penis dj";
+            usuario.Cpf = "paunocu";
+            usuario.Permissao = Permissao.ADMINISTRADOR;
+            usuario.Estado = Estado.BLOQUEADO;
+            usuario.Rg = "dsadsada";
+            usuario.Senha = "123seguro";
             gerenciador.Adicionar(usuario);
 
+            Console.WriteLine(usuario.ToString());
+
+            gerenciador.Salvar();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            gerenciador.Remover(usuario);
+            Usuario denis = new Usuario();
+            denis.FromString(usuario.ToString());
+            Console.WriteLine(denis.ToString());
         }
 
         private void escalasDeTemperaturaToolStripMenuItem1_Click(object sender, EventArgs e)
