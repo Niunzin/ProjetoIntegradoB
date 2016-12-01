@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.groupLogin = new System.Windows.Forms.GroupBox();
+            this.llBCadastro = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.groupLogin.SuspendLayout();
             this.SuspendLayout();
@@ -114,10 +115,10 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(12, 87);
+            this.btnEntrar.Location = new System.Drawing.Point(221, 87);
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(348, 37);
+            this.btnEntrar.Size = new System.Drawing.Size(139, 37);
             this.btnEntrar.TabIndex = 5;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -164,6 +165,7 @@
             // 
             // groupLogin
             // 
+            this.groupLogin.Controls.Add(this.llBCadastro);
             this.groupLogin.Controls.Add(this.btnEntrar);
             this.groupLogin.Controls.Add(this.label1);
             this.groupLogin.Controls.Add(this.txtSenha);
@@ -178,6 +180,17 @@
             this.groupLogin.TabIndex = 8;
             this.groupLogin.TabStop = false;
             this.groupLogin.Text = "Área de acesso";
+            // 
+            // llBCadastro
+            // 
+            this.llBCadastro.AutoSize = true;
+            this.llBCadastro.Location = new System.Drawing.Point(7, 97);
+            this.llBCadastro.Name = "llBCadastro";
+            this.llBCadastro.Size = new System.Drawing.Size(81, 16);
+            this.llBCadastro.TabIndex = 6;
+            this.llBCadastro.TabStop = true;
+            this.llBCadastro.Text = "Criar conta";
+            this.llBCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llBCadastro_LinkClicked);
             // 
             // frmLogin
             // 
@@ -220,6 +233,7 @@
         private System.Windows.Forms.ToolStripMenuItem escalasDeTemperaturaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem calculadoraOfDatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forçaDaSenhaToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel llBCadastro;
     }
 }
 

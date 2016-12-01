@@ -18,10 +18,15 @@ namespace Projeto_F2
     public partial class frmLogin : Form
     {
         public const string APP_VERSION = "2.1";
+        Usuario usuario;
+        Gerenciador gerenciador;
 
         public frmLogin()
         {
             InitializeComponent();
+
+            gerenciador = new Gerenciador();
+            gerenciador.Carregar();
         }
 
         private void lToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,31 +56,23 @@ namespace Projeto_F2
             new frmSobre().Show();
         }
 
-        
-        Usuario usuario = new Usuario();
-        Gerenciador gerenciador = new Gerenciador();
         private void frmLogin_Load(object sender, EventArgs e)
         {
             this.Text += " " + APP_VERSION;
-
-            usuario.Nome = "roberto denis penis dj";
-            usuario.Cpf = "paunocu";
-            usuario.Permissao = Permissao.ADMINISTRADOR;
-            usuario.Estado = Estado.BLOQUEADO;
-            usuario.Rg = "dsadsada";
-            usuario.Senha = "123seguro";
-            gerenciador.Adicionar(usuario);
-
-            Console.WriteLine(usuario.ToString());
-
-            gerenciador.Salvar();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Usuario denis = new Usuario();
-            denis.FromString(usuario.ToString());
-            Console.WriteLine(denis.ToString());
+            usuario = gerenciador.Entrar(txtUsuario.Text.Trim(), txtSenha.Text.Trim());
+
+            if (usuario == null)
+            {
+                MessageBox.Show("Usuário ou senha inválido(s).", "Falha ao entrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } else
+            {
+                MessageBox.Show(string.Format("Seja bem-vindo, {0}!", usuario.Nome), "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                groupLogin.Enabled = false;
+            }
         }
 
         private void escalasDeTemperaturaToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -91,6 +88,11 @@ namespace Projeto_F2
         private void forçaDaSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmForcaSenha().ShowDialog();
+        }
+
+        private void llBCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new frmCadastro().ShowDialog();
         }
     }
 }

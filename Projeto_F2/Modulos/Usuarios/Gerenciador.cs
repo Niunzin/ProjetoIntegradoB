@@ -10,7 +10,7 @@ namespace Projeto_F2.Modulos.Usuarios
 {
     class Gerenciador
     {
-        private const string arquivo = "reg_usuarios.txt";
+        private string arquivo = Environment.CurrentDirectory + "\\reg_usuarios.txt";
         private List<Usuario> usuarios;
 
         public Gerenciador()
@@ -69,30 +69,70 @@ namespace Projeto_F2.Modulos.Usuarios
 
         public void Salvar()
         {
-            StreamWriter sw = new StreamWriter(arquivo);
-            
-            foreach(Usuario usuario in usuarios)
+            try
             {
-                sw.WriteLine(usuario.ToString());
-            }
+                StreamWriter sw = new StreamWriter(arquivo);
 
-            sw.Close();
+                foreach (Usuario usuario in usuarios)
+                {
+                    sw.WriteLine(usuario.ToString());
+                }
+
+                sw.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Falha ao salvar arquivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        public void Ler()
+        public void Carregar()
         {
-            StreamReader sr = new StreamReader(arquivo);
-            string source = sr.ReadToEnd();
-
-            foreach (string line in source.Split('\n'))
+            try
             {
-                if (string.IsNullOrEmpty(line))
+                if (!File.Exists(arquivo))
                 {
-                    Usuario u = new Usuario();
-                    u.FromString(line);
-                    usuarios.Add(u);
+                    Console.WriteLine("Arquivo " + arquivo + " não identificado.");
+                    return;
+                }
+
+                StreamReader sr = new StreamReader(arquivo);
+                string source = sr.ReadToEnd();
+
+                foreach (string line in source.Split('\n'))
+                {
+                    if (!string.IsNullOrEmpty(line))
+                    {
+                        Usuario u = new Usuario();
+                        u.FromString(line);
+                        usuarios.Add(u);
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Falha ao carregar arquivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public bool Existe(string nome)
+        {
+            if (usuarios.Count > 0)
+                foreach (Usuario usuario in usuarios)
+                    if (usuario.Nome.Equals(nome))
+                        return true;
+
+            return false;
+        }
+
+        public Usuario Entrar(string nome, string senha)
+        {
+            if (Existe(nome))
+                foreach (Usuario usuario in usuarios)
+                    if (usuario.Nome.Equals(nome) && usuario.Senha.Equals(senha))
+                        return usuario;
+
+            return null;
         }
     }
 }
