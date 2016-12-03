@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.lToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLogin = new System.Windows.Forms.ToolStripMenuItem();
+            this.meusDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.controlarUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuTools = new System.Windows.Forms.ToolStripMenuItem();
             this.escalasDeTemperaturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraOfDatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forçaDaSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +47,8 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.groupLogin = new System.Windows.Forms.GroupBox();
             this.llBCadastro = new System.Windows.Forms.LinkLabel();
+            this.lbEntrouTitulo = new System.Windows.Forms.Label();
+            this.lbEntrouDesc = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupLogin.SuspendLayout();
             this.SuspendLayout();
@@ -50,8 +56,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lToolStripMenuItem,
-            this.toolsStripMenuItem,
+            this.menuLogin,
+            this.menuTools,
             this.sobreToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -61,55 +67,91 @@
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // lToolStripMenuItem
+            // menuLogin
             // 
-            this.lToolStripMenuItem.Name = "lToolStripMenuItem";
-            this.lToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.lToolStripMenuItem.Text = "Login";
-            this.lToolStripMenuItem.Click += new System.EventHandler(this.lToolStripMenuItem_Click);
+            this.menuLogin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.meusDadosToolStripMenuItem,
+            this.alterarSenhaToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.controlarUsuáriosToolStripMenuItem});
+            this.menuLogin.Name = "menuLogin";
+            this.menuLogin.Size = new System.Drawing.Size(50, 20);
+            this.menuLogin.Text = "Entrar";
+            this.menuLogin.Click += new System.EventHandler(this.lToolStripMenuItem_Click);
             // 
-            // toolsStripMenuItem
+            // meusDadosToolStripMenuItem
             // 
-            this.toolsStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.meusDadosToolStripMenuItem.Name = "meusDadosToolStripMenuItem";
+            this.meusDadosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.meusDadosToolStripMenuItem.Text = "Meus dados";
+            this.meusDadosToolStripMenuItem.Visible = false;
+            this.meusDadosToolStripMenuItem.Click += new System.EventHandler(this.meusDadosToolStripMenuItem_Click);
+            // 
+            // alterarSenhaToolStripMenuItem
+            // 
+            this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.alterarSenhaToolStripMenuItem.Text = "Alterar senha";
+            this.alterarSenhaToolStripMenuItem.Visible = false;
+            this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator1.Visible = false;
+            // 
+            // controlarUsuáriosToolStripMenuItem
+            // 
+            this.controlarUsuáriosToolStripMenuItem.Name = "controlarUsuáriosToolStripMenuItem";
+            this.controlarUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.controlarUsuáriosToolStripMenuItem.Text = "Controlar Usuários";
+            this.controlarUsuáriosToolStripMenuItem.Visible = false;
+            this.controlarUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.controlarUsuáriosToolStripMenuItem_Click);
+            // 
+            // menuTools
+            // 
+            this.menuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.escalasDeTemperaturaToolStripMenuItem1,
             this.calculadoraOfDatToolStripMenuItem,
             this.forçaDaSenhaToolStripMenuItem});
-            this.toolsStripMenuItem.Name = "toolsStripMenuItem";
-            this.toolsStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.toolsStripMenuItem.Text = "Ferramentas";
+            this.menuTools.Enabled = false;
+            this.menuTools.Name = "menuTools";
+            this.menuTools.Size = new System.Drawing.Size(84, 20);
+            this.menuTools.Text = "Ferramentas";
             // 
             // escalasDeTemperaturaToolStripMenuItem1
             // 
             this.escalasDeTemperaturaToolStripMenuItem1.Name = "escalasDeTemperaturaToolStripMenuItem1";
-            this.escalasDeTemperaturaToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
+            this.escalasDeTemperaturaToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
             this.escalasDeTemperaturaToolStripMenuItem1.Text = "Escalas de Temperatura";
             this.escalasDeTemperaturaToolStripMenuItem1.Click += new System.EventHandler(this.escalasDeTemperaturaToolStripMenuItem1_Click);
             // 
             // calculadoraOfDatToolStripMenuItem
             // 
             this.calculadoraOfDatToolStripMenuItem.Name = "calculadoraOfDatToolStripMenuItem";
-            this.calculadoraOfDatToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.calculadoraOfDatToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.calculadoraOfDatToolStripMenuItem.Text = "Calculadora de Datas";
             this.calculadoraOfDatToolStripMenuItem.Click += new System.EventHandler(this.calculadoraOfDatToolStripMenuItem_Click);
             // 
             // forçaDaSenhaToolStripMenuItem
             // 
             this.forçaDaSenhaToolStripMenuItem.Name = "forçaDaSenhaToolStripMenuItem";
-            this.forçaDaSenhaToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.forçaDaSenhaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.forçaDaSenhaToolStripMenuItem.Text = "Avaliar Senha";
             this.forçaDaSenhaToolStripMenuItem.Click += new System.EventHandler(this.forçaDaSenhaToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -143,6 +185,7 @@
             this.txtSenha.PasswordChar = '•';
             this.txtSenha.Size = new System.Drawing.Size(292, 23);
             this.txtSenha.TabIndex = 2;
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // label2
             // 
@@ -162,6 +205,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(292, 23);
             this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // groupLogin
             // 
@@ -172,11 +216,11 @@
             this.groupLogin.Controls.Add(this.label2);
             this.groupLogin.Controls.Add(this.txtUsuario);
             this.groupLogin.Enabled = false;
-            this.groupLogin.Location = new System.Drawing.Point(16, 33);
+            this.groupLogin.Location = new System.Drawing.Point(13, 33);
             this.groupLogin.Margin = new System.Windows.Forms.Padding(4);
             this.groupLogin.Name = "groupLogin";
             this.groupLogin.Padding = new System.Windows.Forms.Padding(4);
-            this.groupLogin.Size = new System.Drawing.Size(368, 135);
+            this.groupLogin.Size = new System.Drawing.Size(371, 135);
             this.groupLogin.TabIndex = 8;
             this.groupLogin.TabStop = false;
             this.groupLogin.Text = "Área de acesso";
@@ -190,22 +234,43 @@
             this.llBCadastro.TabIndex = 6;
             this.llBCadastro.TabStop = true;
             this.llBCadastro.Text = "Criar conta";
+            this.llBCadastro.Visible = false;
             this.llBCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llBCadastro_LinkClicked);
+            // 
+            // lbEntrouTitulo
+            // 
+            this.lbEntrouTitulo.AutoSize = true;
+            this.lbEntrouTitulo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEntrouTitulo.Location = new System.Drawing.Point(12, 33);
+            this.lbEntrouTitulo.Name = "lbEntrouTitulo";
+            this.lbEntrouTitulo.Size = new System.Drawing.Size(132, 16);
+            this.lbEntrouTitulo.TabIndex = 9;
+            this.lbEntrouTitulo.Text = "Seja bem-vindo, ";
+            // 
+            // lbEntrouDesc
+            // 
+            this.lbEntrouDesc.Location = new System.Drawing.Point(12, 49);
+            this.lbEntrouDesc.Name = "lbEntrouDesc";
+            this.lbEntrouDesc.Size = new System.Drawing.Size(372, 120);
+            this.lbEntrouDesc.TabIndex = 10;
+            this.lbEntrouDesc.Text = "Utilize o menu para navegação e utilização das nossas ferramentas.\r\n";
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 178);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupLogin);
+            this.Controls.Add(this.lbEntrouDesc);
+            this.Controls.Add(this.lbEntrouTitulo);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "F6";
+            this.Text = "Gerenciador de Usuários";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -220,7 +285,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem lToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuLogin;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Button btnEntrar;
@@ -229,11 +294,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.GroupBox groupLogin;
-        private System.Windows.Forms.ToolStripMenuItem toolsStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuTools;
         private System.Windows.Forms.ToolStripMenuItem escalasDeTemperaturaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem calculadoraOfDatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forçaDaSenhaToolStripMenuItem;
         private System.Windows.Forms.LinkLabel llBCadastro;
+        private System.Windows.Forms.ToolStripMenuItem meusDadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alterarSenhaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem controlarUsuáriosToolStripMenuItem;
+        private System.Windows.Forms.Label lbEntrouTitulo;
+        private System.Windows.Forms.Label lbEntrouDesc;
     }
 }
 

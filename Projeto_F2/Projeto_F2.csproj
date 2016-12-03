@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +62,12 @@
     </Compile>
     <Compile Include="frmSobre.Designer.cs">
       <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Administrador\frmControle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Administrador\frmControle.Designer.cs">
+      <DependentUpon>frmControle.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\CalculadoraDeDatas\frmCalcData.cs">
       <SubType>Form</SubType>
@@ -103,6 +110,18 @@
     </Compile>
     <Compile Include="Modulos\Usuarios\Gerenciador.cs" />
     <Compile Include="Modulos\Usuarios\Usuario.cs" />
+    <Compile Include="Modulos\Utilitarios\frmAlterarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Utilitarios\frmAlterarSenha.Designer.cs">
+      <DependentUpon>frmAlterarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Utilitarios\frmMeusDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Utilitarios\frmMeusDados.Designer.cs">
+      <DependentUpon>frmMeusDados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCadastro.resx">
@@ -113,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSobre.resx">
       <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Administrador\frmControle.resx">
+      <DependentUpon>frmControle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\CalculadoraDeDatas\frmCalcData.resx">
       <DependentUpon>frmCalcData.cs</DependentUpon>
@@ -131,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\ForcaSenha\frmForcaSenha.resx">
       <DependentUpon>frmForcaSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Utilitarios\frmAlterarSenha.resx">
+      <DependentUpon>frmAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Utilitarios\frmMeusDados.resx">
+      <DependentUpon>frmMeusDados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -77,6 +77,30 @@ namespace Projeto_F2.Modulos.ForcaSenha
             return "Erro indefinido.";
         }
 
+        public static string ObterForcaString(int pontuacao)
+        {
+            if (pontuacao >= 9)
+            {
+                return "Muito Forte";
+            }
+            else if (pontuacao >= 7)
+            {
+                return "Forte";
+            }
+            else if (pontuacao >= 5)
+            {
+                return "Razoável";
+            }
+            else if (pontuacao >= 3)
+            {
+                return "Fraca";
+            }
+            else
+            {
+                return "Muito Fraca";
+            }
+        }
+
         public static int ObterForca(string senha)
         {
             int pontos = 10;

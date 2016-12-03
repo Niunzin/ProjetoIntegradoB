@@ -8,7 +8,7 @@ using System.IO;
 
 namespace Projeto_F2.Modulos.Usuarios
 {
-    class Gerenciador
+    public class Gerenciador
     {
         private string arquivo = Environment.CurrentDirectory + "\\reg_usuarios.txt";
         private List<Usuario> usuarios;
@@ -86,6 +86,11 @@ namespace Projeto_F2.Modulos.Usuarios
             }
         }
 
+        public void Limpar()
+        {
+            usuarios.Clear();
+        }
+
         public void Carregar()
         {
             try
@@ -108,6 +113,8 @@ namespace Projeto_F2.Modulos.Usuarios
                         usuarios.Add(u);
                     }
                 }
+
+                sr.Close();
             }
             catch (Exception e)
             {

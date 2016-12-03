@@ -22,7 +22,7 @@ namespace Projeto_F2.Modulos.Usuarios
         public static int ADMINISTRADOR = 3;
     }
 
-    class Usuario
+    public class Usuario
     {
         private string _cpf = "";
 
@@ -57,7 +57,7 @@ namespace Projeto_F2.Modulos.Usuarios
         public string Rg
         {
             get { if (!string.IsNullOrEmpty(_rg)) return _rg; return ""; }
-            set { if (_cpf.Length <= 10) _rg = value; }
+            set { if (_rg.Length <= 10) _rg = value; }
         }
         private int _estado = 0;
 
@@ -74,6 +74,28 @@ namespace Projeto_F2.Modulos.Usuarios
             set { _permissao = value; }
         }
 
+        public int diferencaDataAlteracaoSenha()
+        {
+            TimeSpan ts = DateTime.Now - Alteracaosenha;
+            return ts.Days;
+        }
+
+        public bool SenhaValida()
+        {
+            if (diferencaDataAlteracaoSenha() > 90)
+                return false;
+
+            return true;
+        }
+
+        public bool SenhaCritica()
+        {
+            if (diferencaDataAlteracaoSenha() > 180)
+                return true;
+
+            return false;
+        }
+
         public Usuario()
         {
 
@@ -83,9 +105,9 @@ namespace Projeto_F2.Modulos.Usuarios
         {
             char mask = ' ';
             return
-                this.Cpf.PadRight(10, mask) +
+                this.Cpf.PadRight(11, mask) +
                 this.Senha.PadRight(50, mask) +
-                this.Alteracaosenha.ToString("dd/mm/yyyy hh:mm:ss").PadRight(19, mask) +
+                this.Alteracaosenha.ToString("dd/MM/yyyy HH:mm:ss").PadRight(19, mask) +
                 this.Nome.PadRight(50, mask) +
                 this.Rg.PadRight(10, mask) +
                 this.Estado.ToString() +
@@ -96,18 +118,19 @@ namespace Projeto_F2.Modulos.Usuarios
         {
             try
             {
-                int lenght = 141;
+                int lenght = 142;
+                txtUsuarios = txtUsuarios.TrimEnd();
 
                 if (txtUsuarios.Length != lenght)
-                    throw new Exception("Falha ao obter usuário.");
+                    throw new Exception("Falha ao obter usuário. (esperado tamanho " + lenght + ", obtido " + txtUsuarios.Length + ")");
                 
-                this.Cpf = txtUsuarios.Substring(0, 10).Trim();
-                this.Senha = txtUsuarios.Substring(10, 50).Trim();
-                this.Alteracaosenha = DateTime.ParseExact(txtUsuarios.Substring(60, 19).Trim(), "dd/mm/yyyy hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
-                this.Nome = txtUsuarios.Substring(79, 50).Trim();
-                this.Rg = txtUsuarios.Substring(129, 10).Trim();
-                this.Estado = int.Parse(txtUsuarios.Substring(139, 1).Trim());
-                this.Permissao = int.Parse(txtUsuarios.Substring(140, 1).Trim());
+                this.Cpf = txtUsuarios.Substring(0, 11).Trim();
+                this.Senha = txtUsuarios.Substring(11, 50).Trim();
+                this.Alteracaosenha = DateTime.ParseExact(txtUsuarios.Substring(60, 20).Trim(), "dd/MM/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                this.Nome = txtUsuarios.Substring(80, 50).Trim();
+                this.Rg = txtUsuarios.Substring(130, 10).Trim();
+                this.Estado = int.Parse(txtUsuarios.Substring(140, 1).Trim());
+                this.Permissao = int.Parse(txtUsuarios.Substring(141, 1).Trim());
 
             }
             catch (Exception e)
