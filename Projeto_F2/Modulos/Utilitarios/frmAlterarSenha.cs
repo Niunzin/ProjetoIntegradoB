@@ -73,7 +73,7 @@ namespace Projeto_F2.Modulos.Utilitarios
                 if (!txtSenha.Text.Equals(txtSenha2.Text))
                     throw new Exception("As senhas não conferem.");
 
-                usuario.Senha = txtSenha.Text;
+                usuario.Senha = Cripto.MD5(txtSenha.Text);
                 usuario.Alteracaosenha = DateTime.Now;
                 usuario.Estado = Estado.NORMAL;
 

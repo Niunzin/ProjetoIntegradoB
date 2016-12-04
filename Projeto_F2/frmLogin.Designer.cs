@@ -49,6 +49,7 @@
             this.llBCadastro = new System.Windows.Forms.LinkLabel();
             this.lbEntrouTitulo = new System.Windows.Forms.Label();
             this.lbEntrouDesc = new System.Windows.Forms.Label();
+            this.criptografarMensagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupLogin.SuspendLayout();
             this.SuspendLayout();
@@ -114,7 +115,8 @@
             this.menuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.escalasDeTemperaturaToolStripMenuItem1,
             this.calculadoraOfDatToolStripMenuItem,
-            this.forçaDaSenhaToolStripMenuItem});
+            this.forçaDaSenhaToolStripMenuItem,
+            this.criptografarMensagemToolStripMenuItem});
             this.menuTools.Enabled = false;
             this.menuTools.Name = "menuTools";
             this.menuTools.Size = new System.Drawing.Size(84, 20);
@@ -123,21 +125,21 @@
             // escalasDeTemperaturaToolStripMenuItem1
             // 
             this.escalasDeTemperaturaToolStripMenuItem1.Name = "escalasDeTemperaturaToolStripMenuItem1";
-            this.escalasDeTemperaturaToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
+            this.escalasDeTemperaturaToolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
             this.escalasDeTemperaturaToolStripMenuItem1.Text = "Escalas de Temperatura";
             this.escalasDeTemperaturaToolStripMenuItem1.Click += new System.EventHandler(this.escalasDeTemperaturaToolStripMenuItem1_Click);
             // 
             // calculadoraOfDatToolStripMenuItem
             // 
             this.calculadoraOfDatToolStripMenuItem.Name = "calculadoraOfDatToolStripMenuItem";
-            this.calculadoraOfDatToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.calculadoraOfDatToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.calculadoraOfDatToolStripMenuItem.Text = "Calculadora de Datas";
             this.calculadoraOfDatToolStripMenuItem.Click += new System.EventHandler(this.calculadoraOfDatToolStripMenuItem_Click);
             // 
             // forçaDaSenhaToolStripMenuItem
             // 
             this.forçaDaSenhaToolStripMenuItem.Name = "forçaDaSenhaToolStripMenuItem";
-            this.forçaDaSenhaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.forçaDaSenhaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.forçaDaSenhaToolStripMenuItem.Text = "Avaliar Senha";
             this.forçaDaSenhaToolStripMenuItem.Click += new System.EventHandler(this.forçaDaSenhaToolStripMenuItem_Click);
             // 
@@ -255,6 +257,13 @@
             this.lbEntrouDesc.TabIndex = 10;
             this.lbEntrouDesc.Text = "Utilize o menu para navegação e utilização das nossas ferramentas.\r\n";
             // 
+            // criptografarMensagemToolStripMenuItem
+            // 
+            this.criptografarMensagemToolStripMenuItem.Name = "criptografarMensagemToolStripMenuItem";
+            this.criptografarMensagemToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.criptografarMensagemToolStripMenuItem.Text = "Criptografar Mensagem";
+            this.criptografarMensagemToolStripMenuItem.Click += new System.EventHandler(this.criptografarMensagemToolStripMenuItem_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -305,6 +314,7 @@
         private System.Windows.Forms.ToolStripMenuItem controlarUsuáriosToolStripMenuItem;
         private System.Windows.Forms.Label lbEntrouTitulo;
         private System.Windows.Forms.Label lbEntrouDesc;
+        private System.Windows.Forms.ToolStripMenuItem criptografarMensagemToolStripMenuItem;
     }
 }
 

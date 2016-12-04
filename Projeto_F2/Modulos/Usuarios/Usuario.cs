@@ -106,7 +106,7 @@ namespace Projeto_F2.Modulos.Usuarios
             char mask = ' ';
             return
                 this.Cpf.PadRight(11, mask) +
-                this.Senha.PadRight(50, mask) +
+                this.Senha.PadRight(32, mask) +
                 this.Alteracaosenha.ToString("dd/MM/yyyy HH:mm:ss").PadRight(19, mask) +
                 this.Nome.PadRight(50, mask) +
                 this.Rg.PadRight(10, mask) +
@@ -118,19 +118,19 @@ namespace Projeto_F2.Modulos.Usuarios
         {
             try
             {
-                int lenght = 142;
+                int lenght = 124;
                 txtUsuarios = txtUsuarios.TrimEnd();
 
                 if (txtUsuarios.Length != lenght)
                     throw new Exception("Falha ao obter usuário. (esperado tamanho " + lenght + ", obtido " + txtUsuarios.Length + ")");
                 
                 this.Cpf = txtUsuarios.Substring(0, 11).Trim();
-                this.Senha = txtUsuarios.Substring(11, 50).Trim();
-                this.Alteracaosenha = DateTime.ParseExact(txtUsuarios.Substring(60, 20).Trim(), "dd/MM/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
-                this.Nome = txtUsuarios.Substring(80, 50).Trim();
-                this.Rg = txtUsuarios.Substring(130, 10).Trim();
-                this.Estado = int.Parse(txtUsuarios.Substring(140, 1).Trim());
-                this.Permissao = int.Parse(txtUsuarios.Substring(141, 1).Trim());
+                this.Senha = txtUsuarios.Substring(11, 32).Trim();
+                this.Alteracaosenha = DateTime.ParseExact(txtUsuarios.Substring(43, 19).Trim(), "dd/MM/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                this.Nome = txtUsuarios.Substring(62, 50).Trim();
+                this.Rg = txtUsuarios.Substring(112, 10).Trim();
+                this.Estado = int.Parse(txtUsuarios.Substring(122, 1).Trim());
+                this.Permissao = int.Parse(txtUsuarios.Substring(123, 1).Trim());
 
             }
             catch (Exception e)

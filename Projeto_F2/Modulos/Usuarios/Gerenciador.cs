@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Projeto_F2.Modulos.Utilitarios;
 
 namespace Projeto_F2.Modulos.Usuarios
 {
@@ -136,7 +137,7 @@ namespace Projeto_F2.Modulos.Usuarios
         {
             if (Existe(nome))
                 foreach (Usuario usuario in usuarios)
-                    if (usuario.Nome.Equals(nome) && usuario.Senha.Equals(senha))
+                    if (usuario.Nome.Equals(nome) && usuario.Senha.Equals(Cripto.MD5(senha)))
                         return usuario;
 
             return null;

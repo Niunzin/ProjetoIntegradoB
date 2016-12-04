@@ -14,12 +14,13 @@ using Projeto_F2.Modulos.ForcaSenha;
 using Projeto_F2.Modulos.Usuarios;
 using Projeto_F2.Modulos.Administrador;
 using Projeto_F2.Modulos.Utilitarios;
+using Projeto_F2.Modulos.Utilitarios.Criptografia;
 
 namespace Projeto_F2
 {
     public partial class frmLogin : Form
     {
-        public const string APP_VERSION = "10.1";
+        public const string APP_VERSION = "RF10 - 10.1";
         Usuario usuario;
         Gerenciador gerenciador;
 
@@ -29,7 +30,6 @@ namespace Projeto_F2
 
             gerenciador = new Gerenciador();
             gerenciador.Carregar();
-            return;
         }
 
         private void lToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,6 +158,11 @@ namespace Projeto_F2
         private void meusDadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmMeusDados(usuario).Show();
+        }
+
+        private void criptografarMensagemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmCripto().ShowDialog();
         }
     }
 }
