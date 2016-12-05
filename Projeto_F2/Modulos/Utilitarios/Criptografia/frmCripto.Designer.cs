@@ -43,9 +43,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 16);
+            this.label1.Size = new System.Drawing.Size(138, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Digite a mensagem à ser criptografada:";
+            this.label1.Text = "Digite a mensagem:";
             // 
             // txtMensagem
             // 
@@ -90,7 +90,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 23);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Criptografar!";
+            this.button1.Text = "Validar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -134,7 +134,7 @@
             this.MaximizeBox = false;
             this.Name = "frmCripto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Criptografar Mensagem";
+            this.Text = "Mensagem";
             this.Load += new System.EventHandler(this.frmCripto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
             this.ResumeLayout(false);

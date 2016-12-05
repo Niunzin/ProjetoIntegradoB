@@ -162,7 +162,17 @@ namespace Projeto_F2
 
         private void criptografarMensagemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmCripto().ShowDialog();
+            
+        }
+
+        private void codificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmCripto(1).ShowDialog();
+        }
+
+        private void decodificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmCripto(2).ShowDialog();
         }
     }
 }

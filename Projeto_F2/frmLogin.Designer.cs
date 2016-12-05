@@ -38,6 +38,7 @@
             this.escalasDeTemperaturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraOfDatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forçaDaSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criptografarMensagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEntrar = new System.Windows.Forms.Button();
@@ -49,7 +50,8 @@
             this.llBCadastro = new System.Windows.Forms.LinkLabel();
             this.lbEntrouTitulo = new System.Windows.Forms.Label();
             this.lbEntrouDesc = new System.Windows.Forms.Label();
-            this.criptografarMensagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.codificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.decodificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupLogin.SuspendLayout();
             this.SuspendLayout();
@@ -125,23 +127,33 @@
             // escalasDeTemperaturaToolStripMenuItem1
             // 
             this.escalasDeTemperaturaToolStripMenuItem1.Name = "escalasDeTemperaturaToolStripMenuItem1";
-            this.escalasDeTemperaturaToolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
+            this.escalasDeTemperaturaToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
             this.escalasDeTemperaturaToolStripMenuItem1.Text = "Escalas de Temperatura";
             this.escalasDeTemperaturaToolStripMenuItem1.Click += new System.EventHandler(this.escalasDeTemperaturaToolStripMenuItem1_Click);
             // 
             // calculadoraOfDatToolStripMenuItem
             // 
             this.calculadoraOfDatToolStripMenuItem.Name = "calculadoraOfDatToolStripMenuItem";
-            this.calculadoraOfDatToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.calculadoraOfDatToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.calculadoraOfDatToolStripMenuItem.Text = "Calculadora de Datas";
             this.calculadoraOfDatToolStripMenuItem.Click += new System.EventHandler(this.calculadoraOfDatToolStripMenuItem_Click);
             // 
             // forçaDaSenhaToolStripMenuItem
             // 
             this.forçaDaSenhaToolStripMenuItem.Name = "forçaDaSenhaToolStripMenuItem";
-            this.forçaDaSenhaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.forçaDaSenhaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.forçaDaSenhaToolStripMenuItem.Text = "Avaliar Senha";
             this.forçaDaSenhaToolStripMenuItem.Click += new System.EventHandler(this.forçaDaSenhaToolStripMenuItem_Click);
+            // 
+            // criptografarMensagemToolStripMenuItem
+            // 
+            this.criptografarMensagemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.codificarToolStripMenuItem,
+            this.decodificarToolStripMenuItem});
+            this.criptografarMensagemToolStripMenuItem.Name = "criptografarMensagemToolStripMenuItem";
+            this.criptografarMensagemToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.criptografarMensagemToolStripMenuItem.Text = "Cripto";
+            this.criptografarMensagemToolStripMenuItem.Click += new System.EventHandler(this.criptografarMensagemToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -257,12 +269,19 @@
             this.lbEntrouDesc.TabIndex = 10;
             this.lbEntrouDesc.Text = "Utilize o menu para navegação e utilização das nossas ferramentas.\r\n";
             // 
-            // criptografarMensagemToolStripMenuItem
+            // codificarToolStripMenuItem
             // 
-            this.criptografarMensagemToolStripMenuItem.Name = "criptografarMensagemToolStripMenuItem";
-            this.criptografarMensagemToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.criptografarMensagemToolStripMenuItem.Text = "Criptografar Mensagem";
-            this.criptografarMensagemToolStripMenuItem.Click += new System.EventHandler(this.criptografarMensagemToolStripMenuItem_Click);
+            this.codificarToolStripMenuItem.Name = "codificarToolStripMenuItem";
+            this.codificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.codificarToolStripMenuItem.Text = "Codificar";
+            this.codificarToolStripMenuItem.Click += new System.EventHandler(this.codificarToolStripMenuItem_Click);
+            // 
+            // decodificarToolStripMenuItem
+            // 
+            this.decodificarToolStripMenuItem.Name = "decodificarToolStripMenuItem";
+            this.decodificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.decodificarToolStripMenuItem.Text = "Decodificar";
+            this.decodificarToolStripMenuItem.Click += new System.EventHandler(this.decodificarToolStripMenuItem_Click);
             // 
             // frmLogin
             // 
@@ -315,6 +334,8 @@
         private System.Windows.Forms.Label lbEntrouTitulo;
         private System.Windows.Forms.Label lbEntrouDesc;
         private System.Windows.Forms.ToolStripMenuItem criptografarMensagemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem codificarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem decodificarToolStripMenuItem;
     }
 }
 
