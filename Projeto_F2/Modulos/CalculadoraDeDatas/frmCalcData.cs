@@ -52,6 +52,10 @@ namespace Projeto_F2.Modulos.CalculadoraDeDatas
                 if (acao == Utilidades.TipoOperacao.CALCULAR_IDADE)
                 {
                     txtResultado.Clear();
+
+                    if (data > hoje)
+                        throw new Exception("A data inserida não pode ser maior do que a data atual.");
+
                     TimeSpan diferencaDatas = hoje.Subtract(data);
 
                     addTextBoxTitle("Cálculo de Idade");

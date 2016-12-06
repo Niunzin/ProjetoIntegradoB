@@ -32,6 +32,7 @@
             this.listBox = new System.Windows.Forms.ListBox();
             this.btnBloquearDesbloquear = new System.Windows.Forms.Button();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cboxPermissao = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.chckGrupo = new System.Windows.Forms.CheckBox();
             this.chckBloqueados = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +111,17 @@
             this.groupBox.TabIndex = 3;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Usuário selecionado";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExcluir.Location = new System.Drawing.Point(6, 325);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(73, 35);
+            this.btnExcluir.TabIndex = 16;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label7
             // 
@@ -190,11 +201,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 141);
+            this.label3.Font = new System.Drawing.Font("Verdana", 7.5F);
+            this.label3.Location = new System.Drawing.Point(6, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 16);
+            this.label3.Size = new System.Drawing.Size(218, 12);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Senha:";
+            this.label3.Text = "Senha: (insira uma nova para alterar)";
             // 
             // txtNome
             // 
@@ -300,17 +312,6 @@
             this.label6.Size = new System.Drawing.Size(334, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "Controle de Usuários - Administrativo";
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnExcluir.Location = new System.Drawing.Point(6, 325);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(73, 35);
-            this.btnExcluir.TabIndex = 16;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // frmControle
             // 

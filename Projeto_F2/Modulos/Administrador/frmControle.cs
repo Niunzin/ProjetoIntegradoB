@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 using Projeto_F2.Modulos.Usuarios;
+using Projeto_F2.Modulos.Utilitarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +18,13 @@ namespace Projeto_F2.Modulos.Administrador
     {
         List<Usuario> usuarios;
         Gerenciador gerenciador;
+        Usuario admin;
 
-        public frmControle()
+        public frmControle(Usuario admin)
         {
             InitializeComponent();
+
+            this.admin = admin;
 
             gerenciador = new Gerenciador();
             gerenciador.Carregar();
@@ -89,6 +93,11 @@ namespace Projeto_F2.Modulos.Administrador
         {
             try
             {
+                txtSenha.Clear();
+                txtRg.Clear();
+                txtNome.Clear();
+                txtCpf.Clear();
+
                 Usuario selecionado = obterUsuarioSelecionado();
 
                 if (selecionado == null)
@@ -110,7 +119,6 @@ namespace Projeto_F2.Modulos.Administrador
                 txtNome.Text = selecionado.Nome;
                 txtCpf.Text = selecionado.Cpf;
                 txtRg.Text = selecionado.Rg;
-                txtSenha.Text = selecionado.Senha;
                 cboxPermissao.SelectedIndex = selecionado.Permissao;
             }
             catch (Exception erro)
@@ -163,7 +171,15 @@ namespace Projeto_F2.Modulos.Administrador
                 usuario.Cpf = txtCpf.Text;
                 usuario.Nome = txtNome.Text;
                 usuario.Rg = txtRg.Text;
-                usuario.Senha = txtSenha.Text;
+
+                if (!string.IsNullOrEmpty(txtSenha.Text.Trim()))
+                {
+                    usuario.Senha = Cripto.MD5(txtSenha.Text.Trim());
+
+                    if (usuario.Estado == Estado.SENHA_INICIAL)
+                        usuario.Estado = Estado.NORMAL;
+                }
+
                 usuario.Permissao = cboxPermissao.SelectedIndex;
 
                 MessageBox.Show("As alterações foram salvas com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -207,7 +223,15 @@ namespace Projeto_F2.Modulos.Administrador
 
         private void btnResetar_Click(object sender, EventArgs e)
         {
+            Usuario usuario = obterUsuarioSelecionado();
 
+            if (usuario == null)
+                throw new Exception("Usuário não encontrado.");
+
+            usuario.Senha = "";
+            usuario.Estado = Estado.SENHA_INICIAL;
+
+            gerenciador.Salvar();
         }
 
         private void chckBloqueados_CheckedChanged(object sender, EventArgs e)
@@ -222,6 +246,9 @@ namespace Projeto_F2.Modulos.Administrador
                 if (MessageBox.Show("Você realmente deseja deletar esse usuário?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     Usuario usuario = obterUsuarioSelecionado();
+
+                    if (usuario.Nome == admin.Nome)
+                        throw new Exception("Você não pode deletar a si mesmo.");
 
                     if (usuario.Permissao == Permissao.ADMINISTRADOR)
                         throw new Exception("Você não pode deletar um usuário com privilégio de administrador.");

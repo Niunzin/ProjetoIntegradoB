@@ -50,7 +50,7 @@ namespace Projeto_F2.Modulos.Escala
             // txtCelsius
             // 
             this.txtCelsius.Location = new System.Drawing.Point(109, 23);
-            this.txtCelsius.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCelsius.Margin = new System.Windows.Forms.Padding(4);
             this.txtCelsius.Name = "txtCelsius";
             this.txtCelsius.ReadOnly = true;
             this.txtCelsius.Size = new System.Drawing.Size(167, 24);
@@ -62,7 +62,7 @@ namespace Projeto_F2.Modulos.Escala
             this.label1.Location = new System.Drawing.Point(8, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 17);
+            this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Temperatura:";
             // 
@@ -84,9 +84,9 @@ namespace Projeto_F2.Modulos.Escala
             this.groupBox1.Controls.Add(this.txtTemp);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(285, 90);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
@@ -96,9 +96,9 @@ namespace Projeto_F2.Modulos.Escala
             // 
             this.rdFah.AutoSize = true;
             this.rdFah.Location = new System.Drawing.Point(179, 55);
-            this.rdFah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdFah.Margin = new System.Windows.Forms.Padding(4);
             this.rdFah.Name = "rdFah";
-            this.rdFah.Size = new System.Drawing.Size(100, 21);
+            this.rdFah.Size = new System.Drawing.Size(99, 21);
             this.rdFah.TabIndex = 6;
             this.rdFah.Text = "Fahrenheit";
             this.rdFah.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@ namespace Projeto_F2.Modulos.Escala
             // 
             this.rdKevin.AutoSize = true;
             this.rdKevin.Location = new System.Drawing.Point(99, 55);
-            this.rdKevin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdKevin.Margin = new System.Windows.Forms.Padding(4);
             this.rdKevin.Name = "rdKevin";
             this.rdKevin.Size = new System.Drawing.Size(67, 21);
             this.rdKevin.TabIndex = 5;
@@ -121,7 +121,7 @@ namespace Projeto_F2.Modulos.Escala
             this.rdCelsius.AutoSize = true;
             this.rdCelsius.Checked = true;
             this.rdCelsius.Location = new System.Drawing.Point(13, 55);
-            this.rdCelsius.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdCelsius.Margin = new System.Windows.Forms.Padding(4);
             this.rdCelsius.Name = "rdCelsius";
             this.rdCelsius.Size = new System.Drawing.Size(75, 21);
             this.rdCelsius.TabIndex = 4;
@@ -132,8 +132,14 @@ namespace Projeto_F2.Modulos.Escala
             // 
             // txtTemp
             // 
+            this.txtTemp.DecimalPlaces = 2;
+            this.txtTemp.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             this.txtTemp.Location = new System.Drawing.Point(109, 23);
-            this.txtTemp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTemp.Margin = new System.Windows.Forms.Padding(4);
             this.txtTemp.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -159,9 +165,9 @@ namespace Projeto_F2.Modulos.Escala
             this.groupBox2.Controls.Add(this.lbCelsius);
             this.groupBox2.Controls.Add(this.txtCelsius);
             this.groupBox2.Location = new System.Drawing.Point(16, 112);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(285, 124);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
@@ -173,14 +179,14 @@ namespace Projeto_F2.Modulos.Escala
             this.lbFah.Location = new System.Drawing.Point(8, 91);
             this.lbFah.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbFah.Name = "lbFah";
-            this.lbFah.Size = new System.Drawing.Size(88, 17);
+            this.lbFah.Size = new System.Drawing.Size(87, 17);
             this.lbFah.TabIndex = 7;
             this.lbFah.Text = "Fahrenheit:";
             // 
             // txtFah
             // 
             this.txtFah.Location = new System.Drawing.Point(109, 87);
-            this.txtFah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFah.Margin = new System.Windows.Forms.Padding(4);
             this.txtFah.Name = "txtFah";
             this.txtFah.ReadOnly = true;
             this.txtFah.Size = new System.Drawing.Size(167, 24);
@@ -199,7 +205,7 @@ namespace Projeto_F2.Modulos.Escala
             // txtKelvin
             // 
             this.txtKelvin.Location = new System.Drawing.Point(109, 55);
-            this.txtKelvin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKelvin.Margin = new System.Windows.Forms.Padding(4);
             this.txtKelvin.Name = "txtKelvin";
             this.txtKelvin.ReadOnly = true;
             this.txtKelvin.Size = new System.Drawing.Size(167, 24);
@@ -208,7 +214,7 @@ namespace Projeto_F2.Modulos.Escala
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(201, 244);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 9;
@@ -226,7 +232,7 @@ namespace Projeto_F2.Modulos.Escala
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Verdana", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmEscala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

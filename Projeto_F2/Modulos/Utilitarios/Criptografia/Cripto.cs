@@ -38,8 +38,11 @@ namespace Projeto_F2.Modulos.Utilitarios
             Mensagem = Mensagem.ToUpper();
             string Resultado = "";
 
-            string[] Procurar = new string[] { "*", "#", "+", "-", "$" };
-            string[] Substituir = new string[] { "A", "E", "I", "O", "U" };
+            string[] Procurar = new string[] { "A", "E", "I", "O", "U" };
+            string[] Substituir = new string[] { "*", "#", "+", "-", "$" };
+
+            for (int i = 0; i < Procurar.Length; i++)
+                Mensagem = Mensagem.Replace(Substituir[i], Procurar[i]);
 
             for (int i = 0; i < Mensagem.Length; i++)
             {
@@ -47,10 +50,6 @@ namespace Projeto_F2.Modulos.Utilitarios
                 int ASCIIK = ASCII - Chave;
 
                 string Caracter = Char.ConvertFromUtf32(ASCIIK);
-                for (int j = 0; j < Procurar.Length; j++)
-                    if (Caracter == Procurar[j])
-                        Caracter = Substituir[j];
-
                 Resultado += Caracter;
             }
 

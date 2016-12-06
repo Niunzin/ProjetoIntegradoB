@@ -139,6 +139,8 @@ namespace Projeto_F2.Modulos.Usuarios
                 foreach (Usuario usuario in usuarios)
                     if (usuario.Nome.Equals(nome) && usuario.Senha.Equals(Cripto.MD5(senha)))
                         return usuario;
+                    else if (usuario.Nome.Equals(nome) && string.IsNullOrEmpty(usuario.Senha))
+                        return usuario;
 
             return null;
         }

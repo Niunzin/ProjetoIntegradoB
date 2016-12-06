@@ -141,7 +141,7 @@ namespace Projeto_F2
 
         private void controlarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmControle().Show();
+            new frmControle(usuario).Show();
         }
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
