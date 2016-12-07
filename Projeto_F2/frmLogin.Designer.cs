@@ -39,6 +39,8 @@
             this.calculadoraOfDatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forçaDaSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.criptografarMensagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.codificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.decodificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEntrar = new System.Windows.Forms.Button();
@@ -50,8 +52,7 @@
             this.llBCadastro = new System.Windows.Forms.LinkLabel();
             this.lbEntrouTitulo = new System.Windows.Forms.Label();
             this.lbEntrouDesc = new System.Windows.Forms.Label();
-            this.codificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.decodificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupLogin.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             this.menuLogin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.meusDadosToolStripMenuItem,
             this.alterarSenhaToolStripMenuItem,
+            this.editarPerfilToolStripMenuItem,
             this.toolStripSeparator1,
             this.controlarUsuáriosToolStripMenuItem});
             this.menuLogin.Name = "menuLogin";
@@ -154,6 +156,20 @@
             this.criptografarMensagemToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.criptografarMensagemToolStripMenuItem.Text = "Cripto";
             this.criptografarMensagemToolStripMenuItem.Click += new System.EventHandler(this.criptografarMensagemToolStripMenuItem_Click);
+            // 
+            // codificarToolStripMenuItem
+            // 
+            this.codificarToolStripMenuItem.Name = "codificarToolStripMenuItem";
+            this.codificarToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.codificarToolStripMenuItem.Text = "Codificar";
+            this.codificarToolStripMenuItem.Click += new System.EventHandler(this.codificarToolStripMenuItem_Click);
+            // 
+            // decodificarToolStripMenuItem
+            // 
+            this.decodificarToolStripMenuItem.Name = "decodificarToolStripMenuItem";
+            this.decodificarToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.decodificarToolStripMenuItem.Text = "Decodificar";
+            this.decodificarToolStripMenuItem.Click += new System.EventHandler(this.decodificarToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -269,19 +285,13 @@
             this.lbEntrouDesc.TabIndex = 10;
             this.lbEntrouDesc.Text = "Utilize o menu para navegação e utilização das nossas ferramentas.\r\n";
             // 
-            // codificarToolStripMenuItem
+            // editarPerfilToolStripMenuItem
             // 
-            this.codificarToolStripMenuItem.Name = "codificarToolStripMenuItem";
-            this.codificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.codificarToolStripMenuItem.Text = "Codificar";
-            this.codificarToolStripMenuItem.Click += new System.EventHandler(this.codificarToolStripMenuItem_Click);
-            // 
-            // decodificarToolStripMenuItem
-            // 
-            this.decodificarToolStripMenuItem.Name = "decodificarToolStripMenuItem";
-            this.decodificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.decodificarToolStripMenuItem.Text = "Decodificar";
-            this.decodificarToolStripMenuItem.Click += new System.EventHandler(this.decodificarToolStripMenuItem_Click);
+            this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
+            this.editarPerfilToolStripMenuItem.Visible = false;
+            this.editarPerfilToolStripMenuItem.Click += new System.EventHandler(this.editarPerfilToolStripMenuItem_Click);
             // 
             // frmLogin
             // 
@@ -336,6 +346,7 @@
         private System.Windows.Forms.ToolStripMenuItem criptografarMensagemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem codificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem decodificarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarPerfilToolStripMenuItem;
     }
 }
 

@@ -93,21 +93,23 @@ namespace Projeto_F2
                 menuLogin.Text = usuario.Nome;
                 meusDadosToolStripMenuItem.Visible = true;
                 alterarSenhaToolStripMenuItem.Visible = true;
+                editarPerfilToolStripMenuItem.Visible = true;
                 groupLogin.Enabled = false;
                 groupLogin.Visible = false;
 
                 if (usuario.Permissao == Permissao.ESTAGIARIO)
                 {
                     forçaDaSenhaToolStripMenuItem.Enabled = false;
+                    criptografarMensagemToolStripMenuItem.Enabled = false;
                 }
                 else if (usuario.Permissao == Permissao.OPERADOR)
                 {
-
+                    forçaDaSenhaToolStripMenuItem.Enabled = false;
                 }
                 else if (usuario.Permissao == Permissao.GERENTE)
                 {
 
-                } else
+                } else if (usuario.Permissao == Permissao.ADMINISTRADOR)
                 {
                     controlarUsuáriosToolStripMenuItem.Visible = true;
                     toolStripSeparator1.Visible = true;
@@ -173,6 +175,11 @@ namespace Projeto_F2
         private void decodificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmCripto(2).ShowDialog();
+        }
+
+        private void editarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmAlterarPerfil(usuario, gerenciador).ShowDialog();
         }
     }
 }
